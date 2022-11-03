@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-header: 'Staatliches', cursive;
+  --ff-body: 'Palanquin', sans-serif;
+  
+  font-size: 62.5%;
+  --fs-header: 4rem;
+  --fs-body: 2rem;
+}
+
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+  background: #EFF1FF;
+}
+
+header {
+  height: 27.9rem;
+  padding-top: 3.2rem;
+  background: hsl(218, 17%, 62%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+header img {
+  animation: topdown 2000ms 300ms backwards;
+}
+
+header h1 {
+  color: #FFFFFF;
+  background: hsl(275, 18%, 79%);
+  width: 100%;
+  padding: 8px 87px;
+  font-family: var(--ff-header);
+  text-align: center;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+}
+
+main {
+  padding: 1.4rem 3.2rem 6.0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  animation: leftright 1800ms 700ms backwards;
+}
+
+main p {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: hsl(274, 84%, 12%);
+  text-align: center;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 3.3rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  transition: transform 200ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.card h2 {
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
+  padding: 1px 24px;
+  border-radius: 20px;
+  color: hsl(232, 17%, 35%);
+  background: #FEEAFA;
+  font-family: var(--ff-header);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  animation: blink 2000ms 1500ms backwards;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leftright {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    transform:scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
